@@ -14,6 +14,14 @@ async def on_ready():
     else:
       list = [other.stupid.question, stupid.answer, ignore]
       await question.reply(choice(list))
+
+async def mind(thing):
+  try:
+    await thing.mind()
+  except:
+    await thing.reply('Мне рано еще думать')
+  else:
+    await thing.reply(stupid_answer)
         
 
 bot.run('kryfe.lox')
